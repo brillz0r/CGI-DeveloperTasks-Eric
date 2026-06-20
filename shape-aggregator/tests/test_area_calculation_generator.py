@@ -7,7 +7,7 @@ def test_prints_and_writes_total_area(tmp_path, monkeypatch, capsys):
     # generate_results writes "area.txt" relative to the working directory.
     monkeypatch.chdir(tmp_path)
 
-    generate_results([Square(side=2), Rectangle(width=2, height=3)])
+    generate_results([Rectangle(width=2, height=3), Square(side=2)])
 
     # A count per shape type, followed by the summed total area (4.0 + 6.0).
     expected = "Rectangle: 1\nSquare: 1\nTotal area: 10.0\n"
