@@ -1,8 +1,9 @@
 # Shape Aggregator
 
 A small command-line tool that reads a list of geometric shapes from a JSON
-file, calculates the area of each shape, and reports the results both to the
-console and to an `area.txt` file.
+file, counts how many of each shape type were provided, and sums their areas
+into a single total. The results are reported both to the console and to an
+`area.txt` file.
 
 ## Supported shapes
 
@@ -57,13 +58,16 @@ to run the test suite (see [Running the tests](#running-the-tests)).
    Example output:
 
    ```
-   Total area: 78.5
-   Total area: 12.0
-   Total area: 6.0
-   Total area: 16.0
+   Circle: 1
+   Rectangle: 1
+   Triangle: 1
+   Square: 1
+   Total area: 112.5
    ```
 
-   The same lines are also written to `area.txt` in the current directory.
+   A count is printed for each shape type present in the input, followed by the
+   combined area of all shapes. The same lines are also written to `area.txt` in
+   the current directory.
 
 ## Running the tests
 
@@ -84,7 +88,7 @@ src/
   main.py                        Entry point: parses args, loads shapes, prints results
   argument_parser.py             Defines the --file command-line argument
   shape_loader.py                Reads the JSON file and builds shape objects
-  area_calculation_generator.py  Prints areas and writes them to area.txt
+  area_calculation_generator.py  Counts shapes, totals their area, writes to area.txt
   shapes.json                    Example input file
   shapes/
     shape.py                     Abstract base class defining area()

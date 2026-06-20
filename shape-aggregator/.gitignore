@@ -16,3 +16,6 @@ dist/
 
 # Environment variables
 .env
+
+# Generated output
+area.txt
