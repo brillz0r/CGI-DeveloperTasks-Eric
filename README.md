@@ -20,8 +20,8 @@ De definierade uppgifterna löstes enligt följande.
 4. Refaktorerade enligt instruktionerna.
 
 ### Övrigt
-La stort fokus på felhantering där validering ska ske i business/service-lagret. Jag introducerade ett <em>Result pattern</em> som jag föredrar. Alternativt hade man kunnat implementera <em>custom exceptions</em>, antingen ett exception per specifikt fel som man vill hantera, eller som ett generellt exception med diverse fördefinierade felkoder. Detta kan sedan kombineras med ett ett middleware som fångar dessa exceptions.
+La stort fokus på felhantering där validering ska ske i business/service-lagret. Jag introducerade ett <em>Result pattern</em> som jag föredrar. Alternativt hade man kunnat implementera <em>custom exceptions</em>, antingen ett exception per specifikt fel som man vill hantera, eller som ett generellt exception med diverse fördefinierade felkoder. Detta kan sedan kombineras med ett middleware som fångar dessa exceptions.
 
 Jag introducerade även ett nytt request-objekt vid uppskapning av nya bokningar så kontraktet inte exponerar det interna id't.
 
-De båda projekten är beskrivna i readme-filer i respektive mapp. Dessa skapades med hjälv av Claude.
+De båda projekten är beskrivna i readme-filer i respektive mapp. Dessa skapades med hjälp av Claude.
